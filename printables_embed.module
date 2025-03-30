@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Contains printables_embed.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function printables_embed_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.printables_embed':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Printables Embed module provides a field type for embedding Printables 3D models.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function printables_embed_theme() {
+  return [
+    'printables_embed' => [
+      'variables' => [
+        'name' => NULL,
+        'author' => NULL,
+        'author_avatar' => NULL,
+        'image_url' => NULL,
+        'likes_count' => NULL,
+        'download_count' => NULL,
+        'view_count' => NULL,
+        'model_url' => NULL,
+        'attributes' => [],
+      ],
+      'template' => 'printables-embed',
+    ],
+  ];
+}

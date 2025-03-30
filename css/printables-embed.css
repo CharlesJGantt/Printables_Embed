@@ -1,0 +1,69 @@
+.printables-embed {
+  font-family: Arial, sans-serif;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.printables-embed .thumbnail {
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.printables-embed .content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.printables-embed .model-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.printables-embed .author {
+  color: #555;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.printables-embed .author-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.printables-embed .stats {
+  display: flex;
+  gap: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.printables-embed .stat {
+  display: flex;
+  align-items: center;
+}
+
+.printables-embed .stat-icon {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+.printables-embed .printables-logo {
+  height: 20px;
+  margin-top: 10px;
+}
