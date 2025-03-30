@@ -22,13 +22,34 @@
   justify-content: space-between;
 }
 
+.printables-embed .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
 .printables-embed .model-name {
   font-size: 18px;
   font-weight: bold;
-  margin: 0 0 5px 0;
+  margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  flex: 1;
+}
+
+.printables-embed .logo-container {
+  text-decoration: none;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.printables-embed .printables-text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #FA6831;
+  font-size: 14px;
 }
 
 .printables-embed .author {
@@ -43,6 +64,28 @@
   height: 24px;
   border-radius: 50%;
   margin-right: 8px;
+}
+
+.printables-embed .summary {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+  max-height: 54px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.printables-embed .stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+  background-color: transparent;
 }
 
 .printables-embed .stats {
@@ -63,38 +106,6 @@
   height: 16px;
 }
 
-.printables-embed .printables-logo {
-  height: 20px;
-  margin-top: 10px;
-}
-
-.printables-embed .summary {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #444;
-  line-height: 1.4;
-  max-height: 54px;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-}
-
-.printables-embed .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 10px;
-}
-
-.printables-embed .stats {
-  display: flex;
-  gap: 15px;
-  color: #555;
-  font-size: 14px;
-}
-
 .printables-embed .view-button {
   background-color: rgb(250, 104, 49);
   color: white;
@@ -109,4 +120,17 @@
 
 .printables-embed .view-button:hover {
   background-color: rgb(230, 94, 39);
+}
+.printables-embed .printables-logo-img {
+  height: 18px;
+  width: auto;
+  margin-top: 3px;
+}
+
+.printables-embed .logo-container {
+  text-decoration: none;
+  margin-left: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }

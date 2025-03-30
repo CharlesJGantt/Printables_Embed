@@ -18,22 +18,25 @@
 <div class="printables-embed" {{ attributes }}>
     <div class="thumbnail" style="background-image: url('{{ image_url }}'); width: 190px; height: 190px;"></div>
     <div class="content">
-        <div>
-            <h2 class="model-name">
-                {{ name }}
-            </h2>
-            <div class="author">
-                <img class="author-avatar" src="{{ author_avatar }}" alt="{{ author }}">
-                    by
-                    {{ author }}
-                </div>
-                {% if summary %}
-                    <div class="summary">
-                        {{ summary }}
-                    </div>
-                {% endif %}
+<div class="header">
+    <h2 class="model-name">
+        {{ name }}
+    </h2>
+    <a href="{{ model_url }}" target="_blank" class="logo-container">
+        <img src="/modules/printables_embed/images/printables-logo.png" alt="Printables" class="printables-logo-img"></a>
+    </div>
+    
+        <div class="author">
+            <img class="author-avatar" src="{{ author_avatar }}" alt="{{ author }}">
+                by
+                {{ author }}
             </div>
-            <div class="footer">
+            {% if summary %}
+                <div class="summary">
+                    {{ summary }}
+                </div>
+            {% endif %}
+            <div class="stats-container">
                 <div class="stats">
                     <div class="stat">
                         <svg class="stat-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -60,6 +63,4 @@
             </div>
         </div>
     </div>
-    <a href="{{ model_url }}" target="_blank">
-    <img class="printables-logo" src="/modules/printables_embed/images/printables-logo.png" alt="Printables"></a>
     
