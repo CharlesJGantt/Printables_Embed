@@ -83,7 +83,7 @@ This data is then displayed in a styled container that matches the look and feel
 ## Credits
 
 - Original GraphQL implementation inspired by [Elias Ruemmler's PrintablesGraphQL](https://github.com/eliasruemmler/printablesgraphql)
-- Created by [Your Name]
+- Created by Charles J Gantt
 
 ## License
 
