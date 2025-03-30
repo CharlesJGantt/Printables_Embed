@@ -6,12 +6,16 @@
   display: flex;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 640px; /* Fixed width */
+  margin: 15px 0; /* Add vertical margin */
 }
 
 .printables-embed .thumbnail {
   background-position: center;
   background-size: cover;
   flex-shrink: 0;
+  width: 190px;
+  height: 190px;
 }
 
 .printables-embed .content {
@@ -19,7 +23,8 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  width: calc(100% - 190px - 30px); /* Calculate proper width based on container minus thumbnail and padding */
+  overflow: hidden; /* Prevent content from expanding the container */
 }
 
 .printables-embed .header {
@@ -27,6 +32,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 5px;
+  width: 100%;
 }
 
 .printables-embed .model-name {
@@ -36,6 +42,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 330px; /* Limit width to ensure truncation */
   flex: 1;
 }
 
@@ -43,13 +50,14 @@
   text-decoration: none;
   margin-left: 10px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
-.printables-embed .printables-text {
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  color: #FA6831;
-  font-size: 14px;
+.printables-embed .printables-logo-img {
+  height: 18px;
+  width: auto;
+  margin-top: 3px;
 }
 
 .printables-embed .author {
@@ -86,6 +94,7 @@
   margin-top: auto;
   padding-top: 10px;
   background-color: transparent;
+  width: 100%;
 }
 
 .printables-embed .stats {
@@ -98,6 +107,7 @@
 .printables-embed .stat {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .printables-embed .stat-icon {
@@ -116,21 +126,29 @@
   font-weight: bold;
   transition: background-color 0.2s;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .printables-embed .view-button:hover {
   background-color: rgb(230, 94, 39);
 }
-.printables-embed .printables-logo-img {
-  height: 18px;
-  width: auto;
-  margin-top: 3px;
+
+.printables-embed .stats {
+  display: flex;
+  gap: 20px; /* Increased from 15px */
+  color: #555;
+  font-size: 16px; /* Increased from 14px */
+  margin-left: 5px; /* Add a little left margin */
 }
 
-.printables-embed .logo-container {
-  text-decoration: none;
-  margin-left: 10px;
-  flex-shrink: 0;
+.printables-embed .stat {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+}
+
+.printables-embed .stat-icon {
+  margin-right: 5px;
+  width: 20px; /* Increased from 16px */
+  height: 20px; /* Increased from 16px */
 }
