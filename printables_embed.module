@@ -28,6 +28,7 @@ function printables_embed_theme() {
     'printables_embed' => [
       'variables' => [
         'name' => NULL,
+        'summary' => NULL,
         'author' => NULL,
         'author_avatar' => NULL,
         'image_url' => NULL,

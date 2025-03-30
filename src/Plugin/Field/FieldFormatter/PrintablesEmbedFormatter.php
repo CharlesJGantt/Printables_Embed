@@ -181,26 +181,27 @@ class PrintablesEmbedFormatter extends FormatterBase implements ContainerFactory
           $height = $this->getSetting('height');
           
           $elements[$delta] = [
-            '#theme' => 'printables_embed',
-            '#name' => $model_data['name'] ?? 'Unknown Model',
-            '#author' => $model_data['user']['publicUsername'] ?? 'Unknown Author',
-            '#author_avatar' => isset($model_data['user']['avatarFilePath']) ? 
-              'https://media.printables.com/' . $model_data['user']['avatarFilePath'] : '',
-            '#image_url' => isset($model_data['image']['filePath']) ?
-              'https://media.printables.com/' . $model_data['image']['filePath'] : '',
-            '#likes_count' => $model_data['likesCount'] ?? 0,
-            '#download_count' => $model_data['downloadCount'] ?? 0,
-            '#view_count' => $model_data['displayCount'] ?? 0,
-            '#model_url' => 'https://www.printables.com/model/' . $model_id . '-' . ($model_data['slug'] ?? 'model'),
-            '#attributes' => [
-              'style' => "width: {$width}px; height: {$height}px;",
-            ],
-            '#attached' => [
-              'library' => [
-                'printables_embed/printables-embed',
-              ],
-            ],
-          ];
+  '#theme' => 'printables_embed',
+  '#name' => $model_data['name'] ?? 'Unknown Model',
+  '#summary' => $model_data['summary'] ?? '',
+  '#author' => $model_data['user']['publicUsername'] ?? 'Unknown Author',
+  '#author_avatar' => isset($model_data['user']['avatarFilePath']) ? 
+    'https://media.printables.com/' . $model_data['user']['avatarFilePath'] : '',
+  '#image_url' => isset($model_data['image']['filePath']) ?
+    'https://media.printables.com/' . $model_data['image']['filePath'] : '',
+  '#likes_count' => $model_data['likesCount'] ?? 0,
+  '#download_count' => $model_data['downloadCount'] ?? 0,
+  '#view_count' => $model_data['displayCount'] ?? 0,
+  '#model_url' => 'https://www.printables.com/model/' . $model_id . '-' . ($model_data['slug'] ?? 'model'),
+  '#attributes' => [
+    'style' => "width: {$width}px; height: {$height}px;",
+  ],
+  '#attached' => [
+    'library' => [
+      'printables_embed/printables-embed',
+    ],
+  ],
+];
         }
         else {
           // Display error message if fetch failed
@@ -232,6 +233,7 @@ query PrintProfile(\$id: ID!) {
     id
     slug
     name
+    summary
     user {
       id
       publicUsername

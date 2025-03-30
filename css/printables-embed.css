@@ -67,3 +67,46 @@
   height: 20px;
   margin-top: 10px;
 }
+
+.printables-embed .summary {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+  max-height: 54px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.printables-embed .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.printables-embed .stats {
+  display: flex;
+  gap: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.printables-embed .view-button {
+  background-color: rgb(250, 104, 49);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.printables-embed .view-button:hover {
+  background-color: rgb(230, 94, 39);
+}

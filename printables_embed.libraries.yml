@@ -3,3 +3,5 @@ printables-embed:
   css:
     theme:
       css/printables-embed.css: {}
+  assets:
+    images/printables-logo.png: {}
