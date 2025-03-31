@@ -2,6 +2,6 @@ name: Printables Embed
 type: module
 description: 'Provides a field type for embedding Printables 3D models.'
 package: Custom
-core_version_requirement: ^10
+core_version_requirement: ^10 | ^11
 dependencies:
   - drupal:field

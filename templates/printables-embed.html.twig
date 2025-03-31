@@ -22,8 +22,9 @@
             <h2 class="model-name" title="{{ name }}">
                 {{ name|length > 33 ? name|slice(0, 30) ~ '...' : name }}
             </h2>
-            <a href="{{ model_url }}" target="_blank" class="logo-container">
-                <img src="/modules/printables_embed/images/printables-logo.png" alt="Printables" class="printables-logo-img"></a>
+<a href="{{ model_url }}" target="_blank" class="logo-container">
+    <img src="{{ logo_path }}" alt="Printables" class="printables-logo-img"></a>
+    
             </div>
             <div class="author">
                 <img class="author-avatar" src="{{ author_avatar }}" alt="{{ author }}">

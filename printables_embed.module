@@ -22,23 +22,44 @@ function printables_embed_help($route_name, RouteMatchInterface $route_match) {
 
 /**
  * Implements hook_theme().
+ *
+ * @return array
+ *   An array of theme hook definitions.
  */
-function printables_embed_theme() {
-  return [
+function printables_embed_theme()
+{
+    return [
     'printables_embed' => [
       'variables' => [
-        'name' => NULL,
-        'summary' => NULL,
-        'author' => NULL,
-        'author_avatar' => NULL,
-        'image_url' => NULL,
-        'likes_count' => NULL,
-        'download_count' => NULL,
-        'view_count' => NULL,
-        'model_url' => NULL,
+        'name' => null,
+        'summary' => null,
+        'author' => null,
+        'author_avatar' => null,
+        'image_url' => null,
+        'likes_count' => null,
+        'download_count' => null,
+        'view_count' => null,
+        'model_url' => null,
+        'logo_path' => null,
         'attributes' => [],
       ],
       'template' => 'printables-embed',
     ],
-  ];
+    ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for printables_embed.
+ *
+ * @param array &$variables
+ *   An associative array of variables to pass to the theme template.
+ *
+ * @return void
+ *   No return value.
+ */
+function printables_embed_preprocess_printables_embed(array &$variables)
+{
+    // Get the module path to use for the logo image
+    $module_path = \Drupal::service('extension.list.module')->getPath('printables_embed');
+    $variables['logo_path'] = '/' . $module_path . '/images/printables-logo.png';
 }
